@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<meta charset="utf-8">
+<html>
+
+<head>
+<script type="text/javascript" async src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-MML-AM_CHTML">
+MathJax.Hub.Config({
+  tex2jax: {
+    inlineMath: [['$','$']],
+    processEscapes: true
+  }
+});
+</script>
+<style>
+body {
+  margin-top: 100px;
+  margin-right: 200px;
+  margin-bottom: 100px;
+  margin-left: 200px;
+}
+p {
+  border: 1px solid grey;
+  padding: 10px;
+  text-align: justify;
+}
+p.obs {
+  color: blue;
+}
+p.sol {
+  color: green;
+}
+</style>
+</head>
+
+<body>
+
+<h1>UNITAT 1. ELS NOMBRES REALS.</h1>
+
+<h3>1.1. Els nombres racionals.</h3>
+
+<p>Hi ha molts i molts nombres, al món. N'hi ha tants que, per
+facilitar la feina a la gent, molts matemàtics s'han dedicat a
+classificar-los (si una cosa caracteritza els matemàtics és l'ordre).</p>
+
+<p>Els més senzills de tots són els naturals, que són el $0,$
+l'$1,$ el $2,$ etcètera. Amb aquests nombres podem realitzar sumes i
+multiplicacions sense problemes. També podem fer moltes restes, com $15-8=7,$ i
+algunes divisions, com $6/3=2.$ Ara bé... què és $2-7$?</p>
+
+<p>Necessitem els nombres negatius per poder donar resposta a
+aquestes operacions: $2-7=-5.$ Els nombres enters inclouen els nombres naturals
+i els nombres negatius: el $-1,$ el $-2,$ etcètera. Ara ja podem fer totes les
+restes que se'ns acudeixin, però seguim tenint un problema... hi ha divisions
+sense solució: $1/7,$ per exemple.</p>
+
+<p>Els nombres racionals es defineixen en forma de raó $a/b,$
+on $a$ és un nombre enter i $b$ és un nombre enter no nul. Aquestes raons
+també poden expressar-se en forma decimal: $1/7=1:7=0.14285714285....$ Hi ha uns
+quants tipus de decimals: els exactes i els periòdics. Hi ha, a més, dos tipus de
+decimals periòdics: els purs i els mixtos.</p>
+
+<p class="obs"><i>Observació 1. De decimal a fracció.</i>
+Decimal exacte: dividim la xifra sense el punt per $10$ per cada decimal que hi
+hagi. Per exemple:
+\[14.2 = \frac{142}{10} = \frac{71}{5}.\]
+\[0.077 = \frac{77}{1000}.\]
+Decimal periòdic pur: dividim la xifra sense el punt menys la part no periòdica
+per $9$ per cada decimal periòdic que hi hagi. Per exemple:
+\[2.\overline{65} = \frac{265-2}{99} = \frac{263}{99}.\]
+\[0.\overline{1} = \frac{1-0}{9} = \frac{1}{9}.\]
+Decimal periòdic mixt: si t'hi fixes, fent un petit canvi es pot transformar un
+decimal periòdic mixt en pur.
+\[1.4\overline{1} = \frac{14.\overline{1}}{10} = \frac{141-14}{90} =
+\frac{127}{90}.\]
+</p>
+
+<p><b>Exercici 1.</b> Transforma aquests nombres en fraccions: $20.0\overline{1},$
+$0.\overline{81},$ $1.09\overline{5}.$
+</p>
+<p class="sol" id="e1" style="display: none">$\frac{1801}{90},$ $\frac{9}{11},$
+$\frac{493}{450}.$</p>
+<button onclick="xou('e1')">Solució.</button>
+
+<h3>1.2. Dels nombres racionals als nombres que no són racionals.</h3>
+
+<p><b>Exercici 2.</b> Expressa aquests nombres en forma de fracció: $\sqrt{2},$
+$\phi,$ $\sqrt{3},$ $\sqrt{5},$ $\pi.$
+</p>
+<p class="sol" id="e2" style="display: none">Perdona per la broma, però no m'he
+pogut resistir.</p>
+<button onclick="xou('e2')">Solució.</button>
+
+<p>Els nombres irracionals són indomables: a diferència dels racionals, tenen un
+nombre infinit de decimals que no segueixen cap patró (pel que sembla$^1$) i, per
+tant, no es poden expressar en forma de fracció. A l'exercici anterior n'hi ha
+alguns, probablement els més importants, però n'hi ha molts més (de fet, n'hi ha
+molts més que de racionals$^2$).</p>
+
+<p>$^1$De fet, no és que se suposi que els nombres irracionals no segueixen cap
+patró, és que s'ha demostrat. Per exemple, fixa't amb la
+<a href='http://www.math.utah.edu/~pa/math/q1.html'>demostració de la
+irracionalitat de $\sqrt{2}$</a>.
+<br>
+$^2$Els conjunt dels nombres racionals és numerable, mentre que el conjunt dels
+nombres reals és no numerable (per tant els irracionals són no numerables). Hi ha
+moltes maneres de demostrar aquests dos fets. Les més conegudes són l'espiral
+racional i l'argument de la diagonal de Cantor.
+</p>
+
+<p>Per fer operacions amb nombres reals, és recomanable no fer-ne aproximacions
+fins que no s'hagin acabat els procediments algebraics. Per exemple:
+\[
+2\pi + \frac{1}{3}\pi - \phi = \left(2 + \frac{1}{3}\right)\pi - \phi =
+\frac{7}{3}\pi - \phi \approx 5.71234887...
+\]
+En general, si no es demana fer una aproximació del valor numèric, s'acostuma a
+deixar el resultat en termes de nombres irracionals (perquè els matemàtics -els de
+debò- no suporten les aproximacions).
+</p>
+
+<h3>1.3. Potències i arrels de nombres reals.</h3>
+
+<p>És important recordar les propietats següents:
+\[
+a^ma^n = a^{m+n};\qquad
+(a^m)^n = a^{mn};\qquad
+a^m:a^n = \frac{a^m}{a^n} = a^{m-n},\quad a\neq0;
+\]
+\[
+(ab)^n = a^nb^n;\qquad
+\left(\frac{a}{b}\right)^n = \frac{a^n}{b^n},\quad b\neq0.
+\]
+</p>
+
+<p class="obs"><i>Observació 2. Potència d'exponent nul.</i>
+Fixem-nos que, si $a\neq0,$
+\[
+\frac{a^n}{a^n} = 1,
+\]
+ja que és una fracció amb numerador i denominador iguals entre si. Ara bé, per la
+propietat anterior, tenim $a^{n-n}=a^0.$ Per tant, si $a\neq0,$
+\[
+a^0 = 1.
+\]
+</p>
+
+<p class="obs"><i>Observació 3. Potència d'exponent negatiu.</i>
+Observem que, si $a\neq0,$
+\[
+\frac{a^4}{a^7} = \frac{1}{a^3}.
+\]
+Per la propietat anterior, però, tenim $a^{4-7}=a^{-3}.$ Per tant, si $a\neq0,$
+\[
+a^{-n} = \frac{1}{a^n}.
+\]
+</p>
+
+<p>Es defineix l'arrel $n-$èsima d'un nombre com l'operació inversa d'elevar-lo a
+exponent $n$:
+\[
+\sqrt[n]{a^n} = a.
+\]
+Per exemple, $\sqrt[3]{-8}=-2,$ ja que $(-2)^3=-8.$ Qualsevol radical de la forma
+$\sqrt[n]{-a}$ amb $n$ parell i $a>0$ no té solució real (té solució imaginària,
+però això és temari de batxillerat).
+</p>
+
+<p class="obs"><i>Observació 4. Potència d'exponent fraccionari.</i>
+Una arrel també es pot expressar com a potència d'exponent fraccionari, així:
+\[
+\sqrt[n]{a} = a^{\frac{1}{n}}.
+\]
+</p>
+
+<h3>1.4. Operacions amb radicals.</h3>
+
+<p>Suma i resta. Tan sols es poden sumar i restar els radicals semblants entre si,
+és a dir, els que tenen el mateix radicand i el mateix índex. Per exemple:
+\[
+\sqrt{2} + 3\sqrt[3]{5} - \frac{4}{3}\sqrt{2} = \left(1 -
+\frac{4}{3}\right)\sqrt{2} + 3\sqrt[3]{5} = -\frac{1}{3}\sqrt{2} + 3\sqrt[3]{5}.
+\]
+</p>
+
+<p>Producte i quocient. Si es té, per exemple, l'expressió $\sqrt{2}\sqrt[3]{3},$
+però es vol trobar la manera d'escriure-la amb un sol radical, es pot seguir el
+següent procediment:
+\[
+\sqrt{2}\sqrt[3]{3} = 2^{\frac{1}{2}}3^{\frac{1}{3}} =
+2^{\frac{3}{6}}3^{\frac{2}{6}} = (2^3)^{\frac{1}{6}}(3^2)^{\frac{1}{6}} =
+(8\cdot9)^{\frac{1}{6}} = \sqrt[6]{72}.
+\]
+</p>
+
+<p><b>Exercici 3.</b> Expressa en forma d'un sol radical cadascun d'aquests
+radicals compostos:
+\[
+(a)\quad \sqrt[3]{2}\sqrt{3},\qquad (b)\quad \sqrt{20}\sqrt{\frac{7}{8}},\qquad
+(c)\quad \sqrt[4]{3}:\sqrt{2}.
+\]
+</p>
+<p class="sol" id="e3" style="display: none">$(a)$ $\sqrt[6]{108},$ $\quad(b)$
+$\sqrt{\frac{35}{2}},$ $\quad(c)$ $\sqrt[4]{\frac{3}{4}}.$</p>
+<button onclick="xou('e3')">Solució.</button>
+
+<p>Extracció de factors com a coeficients d'un radical. És preferible escriure
+radicals amb radicands simplificats, de manera que en comptes d'escriure
+$\sqrt{8},$ per exemple, escrivim
+\[
+\sqrt{8} = \sqrt{2^2\cdot2} = \sqrt{2^2}\sqrt{2} = 2\sqrt{2}.
+\]
+De forma abstracta, l'extracció de factors es pot representar com
+\[
+\sqrt[n]{a^nb} = a\sqrt[n]{b}.
+\]
+
+<p><b>Exercici 4.</b> Extreu factors dels següents radicals:
+\[
+(a)\quad \sqrt[3]{-\frac{24}{a^4}},\qquad (b)\quad \sqrt{27a^5b^2},\qquad
+(c)\quad \sqrt[4]{32}.
+\]
+</p>
+<p class="sol" id="e4" style="display: none">
+$(a)$ $-\frac{2}{a}\sqrt[3]{\frac{3}{a}},$ $\quad(b)$ $3a^2b\sqrt{3a},$ $\quad(c)$ 
+$2\sqrt[4]{2}.$</p>
+<button onclick="xou('e4')">Solució.</button>
+
+<p><b>Exercici 5.</b> Calcula:
+\[
+(a)\quad 3\sqrt[3]{4}\sqrt[4]{\frac{1}{5}}:\sqrt[4]{\frac{2}{5}},\qquad
+(b)\quad (\sqrt[4]{5})^3\sqrt{\sqrt{2}},\qquad
+(c)\quad (\sqrt{6}-3)^2.
+\]
+</p>
+<p class="sol" id="e5" style="display: none">
+$(a)$ $3\sqrt[12]{32},$
+$\quad(b)$ $34\sqrt[3]{7}-3\sqrt{2},$
+$\quad(c)$ $\sqrt[4]{250}.$
+</p>
+<button onclick="xou('e5')">Solució.</button>
+
+<h3>1.5. Racionalització de denominadors amb radicals quadràtics.</h3>
+
+<p>Una altra característica dels matemàtics és la seva tossuderia: busquen
+incansablement la manera més sintètica i bella d'escriure les seves fórmules i de
+demostrar els seus teoremes. Per això, quan un matemàtic veu
+\[
+\frac{1}{\sqrt{2}}
+\]
+es posa a plorar desconsoladament. Pel bé dels matemàtics, més val acostumar-se a
+fer
+\[
+\frac{1}{\sqrt{2}} = \frac{1}{\sqrt{2}} \cdot 1 = \frac{1}{\sqrt{2}} \cdot
+\frac{\sqrt{2}}{\sqrt{2}} = \frac{1 \cdot \sqrt{2}}{\sqrt{2} \cdot \sqrt{2}} =
+\frac{\sqrt{2}}{2},
+\]
+on a la primera igualtat s'ha aplicat el conegut truc de l'almendruc.
+</p>
+
+<p><b>Exercici 6.</b> Racionalitza:
+\[
+(a)\quad \frac{-3}{\sqrt{5}},\qquad
+(b)\quad \frac{\sqrt{2}+\sqrt[3]{3}}{\sqrt{5}},\qquad
+(c)\quad \frac{1}{\sqrt[3]{3}}.
+\]
+</p>
+<p class="sol" id="e6" style="display: none">
+$(a)$ $\frac{-3\sqrt{5}}{5},$
+$\quad(b)$ $\frac{\sqrt{10}+\sqrt[6]{1125}}{5},$
+$\quad(c)$ $\frac{\sqrt[3]{9}}{3}.$
+</p>
+<button onclick="xou('e6')">Solució.</button>
+
+<p><b>Exercici 7.</b> Sabent que $(a+b)(a-b)=a^2-b^2,$ racionalitza:
+\[
+(a)\quad \frac{-2}{\sqrt{2}+\sqrt{3}},\qquad
+(b)\quad \frac{1}{2-\sqrt{5}}.
+\]
+</p>
+<p class="sol" id="e7" style="display: none">
+$(a)$ $2\sqrt{2}-2\sqrt{3},$
+$\quad(b)$ $-2-\sqrt{5}.$
+</p>
+<button onclick="xou('e7')">Solució.</button>
+
+<p>Torna a l'índex.
+<a href='https://elsegonpeix.github.io/mates-mates/'>
+elsegonpeix.github.io/mates-mates
+</a>
+</p>
+
+<script>
+function xou(id){
+  var x = document.getElementById(id).style.display;
+  if (x == 'none') {
+    document.getElementById(id).style.display = 'block';
+  } else {
+    document.getElementById(id).style.display = 'none';
+  }
+}
+</script>
+
+</body>
+</html>
